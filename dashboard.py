@@ -11,13 +11,19 @@ st.write(symbol)
 st.title(screen)
 
 if screen == 'Overview':
-    # get stock info via api key
+    # get stock logo via api token
     url = f"https://cloud.iexapis.com/stable/stock/{symbol}/logo?token={config.IEX_API_TOKEN}"
     r = requests.get(url)
     print(r.json())
     response_json = r.json()
     st.image(response_json['url'])
 
-    # if screen == 'Fundamentals':
-    #   pass
+    # get company data via api token
+    # display json info below icon
+    url = f"https://cloud.iexapis.com/stable/stock/{symbol}/company?token={config.IEX_API_TOKEN}"
+    r = requests.get(url)
+    response_json = r.json()
+    st.write(response_json)
 
+if screen == 'Fundamentals':
+    pass
