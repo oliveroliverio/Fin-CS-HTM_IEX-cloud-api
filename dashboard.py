@@ -12,7 +12,7 @@ st.title(screen)
 
 if screen == 'Overview':
     # get stock info via api key
-    url = f"https://cloud.iexapis.com/stable/stock/aapl/logo?token={config.IEX_API_TOKEN}"
+    url = f"https://cloud.iexapis.com/stable/stock/{symbol}/logo?token={config.IEX_API_TOKEN}"
     r = requests.get(url)
     print(r.json())
     response_json = r.json()
