@@ -20,6 +20,6 @@ Try playing around with adding symbols and observing the reaction
 Add a sidebar
 ```python
 screen = st.sidebar.selectbox("View", ('Overiew', 'Fundamentals', 'News', 'Ownership', 'Technicals'))
-
-
 ```
+
+Refer to [Rest docs](https://iexcloud.io/docs/api/#rest-how-to)
