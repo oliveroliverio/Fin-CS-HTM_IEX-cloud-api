@@ -15,3 +15,11 @@ Run with this command
 streamlit run dashboard.py
 ```
 
+Try playing around with adding symbols and observing the reaction
+
+Add a sidebar
+```python
+screen = st.sidebar.selectbox("View", ('Overiew', 'Fundamentals', 'News', 'Ownership', 'Technicals'))
+
+
+```
